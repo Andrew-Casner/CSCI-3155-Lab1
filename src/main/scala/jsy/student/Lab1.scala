@@ -63,7 +63,12 @@ object Lab1 extends jsy.util.JsyApplication with jsy.lab1.Lab1Like {
     if (a==b) false else true
   }
 
-  def repeat(s: String, n: Int): String = ???
+  def repeat(s: String, n: Int): String = {
+    require(n >=0)
+    if (s == "") "" else
+      if (n ==0) "" else
+        s + repeat(s, n-1)
+  }
 
   def sqrtStep(c: Double, xn: Double): Double = ???
 
