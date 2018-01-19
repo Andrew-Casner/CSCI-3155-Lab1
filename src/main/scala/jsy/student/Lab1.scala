@@ -59,7 +59,9 @@ object Lab1 extends jsy.util.JsyApplication with jsy.lab1.Lab1Like {
     if (n < 0) -n else n
   }
 
-  def xor(a: Boolean, b: Boolean): Boolean = ???
+  def xor(a: Boolean, b: Boolean): Boolean = {
+    if (a==b) false else true
+  }
 
   def repeat(s: String, n: Int): String = ???
 
