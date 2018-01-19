@@ -83,7 +83,6 @@ object Lab1 extends jsy.util.JsyApplication with jsy.lab1.Lab1Like {
   def sqrtErr(c: Double, x0: Double, epsilon: Double): Double = {
     require(epsilon > 0)
     if(abs((x0 * x0) - c) < epsilon) x0 else sqrtErr(c, sqrtStep(c, x0), epsilon)
-
   }
 
   def sqrt(c: Double): Double = {
@@ -102,7 +101,11 @@ object Lab1 extends jsy.util.JsyApplication with jsy.lab1.Lab1Like {
   def repOk(t: SearchTree): Boolean = {
     def check(t: SearchTree, min: Int, max: Int): Boolean = t match {
       case Empty => true
-      case Node(l, d, r) => ???
+      case Node(l, d, r) => {
+        if(d > max || d < min) false else {
+          if( check(l, min, d) && check(r, d, max)) true else false
+        }
+      }
     }
     check(t, Int.MinValue, Int.MaxValue)
   }
