@@ -60,13 +60,13 @@ object Lab1 extends jsy.util.JsyApplication with jsy.lab1.Lab1Like {
   }
 
   def xor(a: Boolean, b: Boolean): Boolean = {
-    if (a==b) false else true
+    if (a == b) false else true
   }
 
   def repeat(s: String, n: Int): String = {
-    require(n >=0)
+    require(n >= 0)
     if (s == "") "" else
-      if (n ==0) "" else
+      if (n == 0) "" else
         s + repeat(s, n-1)
   }
 
@@ -74,7 +74,11 @@ object Lab1 extends jsy.util.JsyApplication with jsy.lab1.Lab1Like {
     xn - (((xn * xn) - c)/(2 * xn))
   }
 
-  def sqrtN(c: Double, x0: Double, n: Int): Double = ???
+  def sqrtN(c: Double, x0: Double, n: Int): Double = {
+    require(c >= 0)
+    require(n >= 0)
+    if(n == 0) x0 else sqrtN(c,sqrtStep(c,x0), n-1)
+  }
 
   def sqrtErr(c: Double, x0: Double, epsilon: Double): Double = ???
 
