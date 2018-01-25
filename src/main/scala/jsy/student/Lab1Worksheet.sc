@@ -62,3 +62,11 @@ assert {
 // For convenience, we also have an eval function that takes a string,
 // which calls the parser and then delegates to your eval function.
 //eval("1 + 1")
+
+// Quick maths
+-(-167) // 167
+2 + 2 - 1 // 3
+2 * 2 // 4
+6 / 2 // 3
+6 / 3 // 2
+(2 + (10 / 5)) + ((-10 * 4) / 40) // 3
