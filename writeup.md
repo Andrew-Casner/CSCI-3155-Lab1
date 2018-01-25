@@ -1,7 +1,7 @@
 # Writeup Lab 1
 ### By Andrew Casner and Sean
 1. **Feedback**  
-Needs to be completed
+Completed
 1. **Scala Basics: Binding and Scope**
    1. Consider the following Scala code.  
    ```Scala
@@ -13,7 +13,7 @@ Needs to be completed
    def area(r: Double): Double =
      pi * r * r
    ```
-   The use of `pi` at line 4 is bound at which line? The use of `pi` at line 7 is bound at which line?  
+   The use of `pi` at line 4 is bound at line 3. The use of `pi` at line 7 is bound at line 1. 
    1. Consider the following Scala code.  
    ```Scala
    val x = 3
@@ -30,7 +30,7 @@ Needs to be completed
      }
    val y = x + f(x)
    ```
-   The use of `x` at line 3 is bound at which line? The use of `x` at line 6 is bound at which line? The use of `x` at line 10 is bound at which line? The use of `x` at line 14 is bound at which line?
+   The use of `x` at line 3 is bound at line 2. The use of `x` at line 6 is bound at line 5. The use of `x` at line 10 is bound at line 2. The use of `x` at line 14 is bound at line 1.
 1. **Scala Basics: Typing**  
    1. Is the Body of `g` well typed?  
    ```Scala
@@ -39,11 +39,12 @@ Needs to be completed
      if (x == 0) (b, 1) else (b, a + 2)
    }
    ```
+   No. There is no typing on what the return of the function is. It should be `def g(x: Int): (Int, Int) = {`
 1. **Run-Time Library**  
-Needs to be completed
+Completed
 1. **Run-Time Library: Recursion**  
-Needs to be completed
+Completed
 1. **Data Structures Review: Binary Search Trees**  
-Needs to be completed
+Completed
 1. **JavaScripty Interpreter: Numbers**  
-Needs to be completed
+Completed
