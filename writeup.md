@@ -30,7 +30,7 @@ Completed
      }
    val y = x + f(x)
    ```
-   The use of `x` at line 3 is bound at line 2. The use of `x` at line 6 is bound at line 5. The use of `x` at line 10 is bound at line 2. The use of `x` at line 14 is bound at line 1.
+   The use of `x` at line 3 is bound at line 2. The use of `x` at line 6 is bound at line 5. The use of `x` at line 10 is bound at line 2. The use of `x` at line 13 is bound at line 1.
 1. **Scala Basics: Typing**  
    1. Is the Body of `g` well typed?  
    ```Scala
@@ -39,7 +39,7 @@ Completed
      if (x == 0) (b, 1) else (b, a + 2)
    }
    ```
-   No. There is no typing on what the return of the function is. It should be `def g(x: Int): (Int, Int) = {`
+   Yes. The code returns a constant type of a tuple of int's
 1. **Run-Time Library**  
 Completed
 1. **Run-Time Library: Recursion**  
